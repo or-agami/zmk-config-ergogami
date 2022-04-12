@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: or-agami
+      url-base: https://github.com/or-agami
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: or-agami
       revision: main
       import: app/west.yml
   self:
