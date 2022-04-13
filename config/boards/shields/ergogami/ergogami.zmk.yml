@@ -1,0 +1,12 @@
+file_format: "1"
+id: ergogami
+name: Ergogami Keyboard 
+type: shield
+url: https://github.com/or-agami/zmk-config-ergogami
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - ergogami_left
+  - ergogami_right
