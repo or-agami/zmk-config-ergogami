@@ -59,18 +59,6 @@
             bindings = <&kp LALT>; 
 	    layers = <SYS>; 
         };
-        lclk {
-            timeout-ms = <20>;
-	    key-positions = <12	13>;
-            bindings = <&mkp LCLK>;
-	    layers = <SYS>;
-        };
-        rclk {
-            timeout-ms = <20>;
-	    key-positions = <4 5>;
-            bindings = <&mkp RCLK>;
-	    layers = <SYS>;
-        };
 
 
     };
