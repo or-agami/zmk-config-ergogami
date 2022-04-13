@@ -3,7 +3,7 @@ manifest:
     - name: or-agami
       url-base: https://github.com/or-agami
   projects:
-    - name: zmk
+    - name: zmk-config-ergogami
       remote: or-agami
       revision: main
       import: app/west.yml
