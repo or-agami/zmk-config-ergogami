@@ -110,7 +110,11 @@
     };
        keymap {
                 compatible = "zmk,keymap";
-                
+//              --------------------------------------------------------------------------------------------------------------------
+//              |   Q   |   W   |   E   |   R   |   T   |                          |   Y   |   U   |   I   |   O   |   P   |   \   |
+//              |   A   |   S   |   D   |   F   |   G   |                          |   H   |   J   |   K   |   L   |   ;   |   '   |
+//              |   Z   |   X   |   C   |   V   |   B   |                          |   N   |   M   |   ,   |   .   |   /   | R CTRL|
+//                                                      | SPACE |          | BACSP |
        		alpha1 {
 		bindings = <
 		&trans 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		&hm RGUI H 	&hm RALT U    		&hm RCTL O	&trans  
