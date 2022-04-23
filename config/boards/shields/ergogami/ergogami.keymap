@@ -35,7 +35,7 @@
         combo_game {
             timeout-ms = <30>;
 	    key-positions = <2 3 4 5>;
-            bindings = <&to GM>;
+            bindings = <&to ISRT>;
         };
         combo_sys {
             timeout-ms = <30>;
