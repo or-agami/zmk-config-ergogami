@@ -20,8 +20,8 @@
  };
  
 /* Layers */
-#define AL1 0
-#define GM 1
+#define QWERTY 0
+#define ISRT 1
 #define AL2 2
 #define AL2U 8
 #define SM1 3
@@ -116,7 +116,7 @@
 //                                                                 |  RC(0,15)  |         |  RC(0,31)  |
        keymap {
                 compatible = "zmk,keymap";
-       		alpha1 {
+       		qwerty {
 		bindings = <
 		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Y        &kp U        &kp I        &kp O        &kp P
 		&kp A        &kp S        &kp D        &kp F        &kp G		   &kp H        &kp J        &kp K        &kp L        &kp SEMI
@@ -124,12 +124,17 @@
 								    &kp SPACE		   &kp BSPC
 		>;
 		};
-       		game {
+       		isrt {
+//           -------------------------------------------------------------------------------------------------------------------------
+//           |     Y     |     C     |     L     |     M     |     K     |       |     Z     |     F     |     U     |     ,     |     '     |
+//           |     I     |     S     |     R     |     T     |     G     |       |     P     |     N     |     E     |     A     |     O     |
+//           |     Q     |     V     |     W     |     D     |     J     |       |     B     |     H     |     /     |     .     |     X     |
+//                                                           |   SPACE   |       |    BSPC   |
 		bindings = <
-		&trans 		&kp L 		&kp G 		&kp D			&hm RGUI H 	&hm RALT U    		&hm RCTL O	&trans  
-		&kp I		&kp S		&kp R		&kp T 		 	&hl SYS N    	&hl SM1 E   		&hl SM2  A 	&hl NM1 C
-		&trans	 	&trans 		&trans 		&kp SPC 		&sl AL2		&trans 			&trans		&trans
-								&trans	 		&trans
+		&kp Y       &kp C       &kp L       &kp M       &kp K		    &kp Z       &kp F       &kp U       &kp COMMA   &kp SQT
+		&kp I       &kp S       &kp R       &kp T       &kp G		    &kp P       &kp N       &kp E       &kp A       &kp O
+		&kp Q       &kp V       &kp W       &kp D       &kp J		    &kp B       &kp H       &kp FSLH    &kp DOT     &kp X
+								&kp SPACE	    &kp BSPC
 		>;
 		};
        		alpha2 {
