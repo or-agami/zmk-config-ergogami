@@ -168,7 +168,7 @@
 		bindings = <
 		&trans		&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 		&hm RGUI N2 	&hm RALT N3		&hm RCTL N4	&trans
 		&kp MINUS	&kp PLUS 	&kp N5		&kp N6			&kp N7		&kp N8			&kp N9   	&kp EQUAL
-		&trans  	&trans 		&trans		&sr LSHIFT AL1 		&trans 		&trans 			&trans  	&trans 
+		&trans  	&trans 		&trans		&sr LSHIFT ISRT		&trans 		&trans 			&trans  	&trans 
 								&trans	 	 	&trans
 		>;
 		};
