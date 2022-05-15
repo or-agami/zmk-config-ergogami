@@ -168,7 +168,7 @@
 		bindings = <
 		&trans		&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 		&hm RGUI N2 	&hm RALT N3		&hm RCTL N4	&trans
 		&kp MINUS	&kp PLUS 	&kp N5		&kp N6			&kp N7		&kp N8			&kp N9   	&kp EQUAL
-		&trans  	&trans 		&trans		&sr LSHIFT ISRT		&trans 		&trans 			&trans  	&trans 
+		&trans  	&trans 		&trans		&trabs			&trans 		&trans 			&trans  	&trans 
 								&trans	 	 	&trans
 		>;
 		};
@@ -177,7 +177,7 @@
 		bindings = <
 		&trans		 	&kp ESC			&kp LC(LS(TAB)) 	&kp RC(TAB)		&td LG(V) LG(C) 	&kp UP 		&td Q BKSP 			&trans
 		&td LG(GRAVE) TAB	&td HOME DEL		&td END LG(LBKT) 	&kp LG(RBKT)		&td TAB LEFT  		&kp DOWN 	&td  LC(LG(LS(N4))) RIGHT 	&kp RET 
-		&trans 			&trans 		 	&trans			&sr LSHIFT AL1 		&kp RGUI		&trans 		&trans				&trans 	   
+		&trans 			&trans 		 	&trans			&trans	 		&kp RGUI		&trans 		&trans				&trans 	   
 									 		&trans	 		&trans
 		>;
 		};
