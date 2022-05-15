@@ -34,8 +34,8 @@
         compatible = "zmk,combos";
         combo_game {
             timeout-ms = <30>;
-	    key-positions = <2 3 4 5>;
-            bindings = <&to ISRT>;
+	    key-positions = <0 1 2 3>;
+            bindings = <&to QWERTY>;
         };
         combo_sys {
             timeout-ms = <30>;
@@ -44,7 +44,7 @@
         };
         combo_caps {
             timeout-ms = <30>;
-	    key-positions = <12 13 14>;
+	    key-positions = <16 17 18>;
             bindings = <&caps_word>;
         };
         combo_bt  {
