@@ -52,18 +52,17 @@
       key-positions = <27 28 29>;
       bindings = <&to BT>;
     };
-    lalt {
+    combo_lalt {
       timeout-ms = <20>;
       key-positions = <10 11>;
       bindings = <&kp LALT>; 
       layers = <SYS>; 
     };
-    enter {
-      timeout-ms = <20>;
-      key-positions = <15 16>;
+    combo_enter {
+      timeout-ms = <30>;
+      key-positions = <16 17>;
       bindings = <&kp RET>; 
     };
-    
   };
 
   behaviors {
