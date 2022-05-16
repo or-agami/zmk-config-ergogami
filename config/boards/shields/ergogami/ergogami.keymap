@@ -90,7 +90,7 @@
             tapping-term-ms = <180>;
             quick_tap_ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&to>;
+            bindings = <&kp>, <&kp>;
 	    retro-tap;
         };
         hl: homerow_layers {
