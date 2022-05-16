@@ -176,9 +176,9 @@
 
 		num {
 		bindings = <
-		&kp Y       &kp C       &kp L       &kp M       &kp K		    &kp Z       &kp N7      &kp N8      &kp N9      &kp SQT
-		&kp I       &kp S       &kp R       &kp T       &kp G		    &kp P       &kp N4      &kp N5      &kp N6      &kp O
-		&kp Q       &kp V       &kp W       &kp D       &kp J		    &kp N0      &kp N1      &kp N2      &kp N3      &kp X
+		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Z       &kp N7      &kp N8      &kp N9      &kp SQT
+		&kp A        &kp S        &kp D        &st LSHFT F  &kp G		   &kp H       &kp N4      &kp N5      &kp N6      &kp O
+		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N0      &kp N1      &kp N2      &kp N3      &kp X
 								&td LSHFT SPACE	    &td RSHFT BSPC
 		>;
 		};
