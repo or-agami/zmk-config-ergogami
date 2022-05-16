@@ -27,8 +27,8 @@
 #define NM1 5	
 #define SYS 6
 #define BT 7	
-/ { 
-/*
+/ {
+
   combos {
     compatible = "zmk,combos";
     combo_game {
@@ -59,7 +59,6 @@
       layers = <SYS>; 
     };
   };
-*/
 
   behaviors {
     hm: homerow_mods {
@@ -125,8 +124,16 @@
 //                                                                 |  RC(0,15)  |         |  RC(0,31)  |
 
   keymap {
-    compatible = "zmk,keymap";
-
+                compatible = "zmk,keymap";
+       		qwerty {
+		bindings = <
+		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Y        &kp U        &kp I        &kp O        &kp P
+		&kp A        &kp S        &kp D        &st LSHFT F  &kp G		   &kp H        &st RSHFT J  &kp K        &kp L        &kp SEMI
+		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N        &kp M        &kp COMMA    &kp DOT      &bt BT_CLR
+								    &lt NM1 SPACE	   &td RSHFT BSPC
+		>;
+		};
+/*
     qwerty {
       label = "QWERTY";
       bindings = <
@@ -141,6 +148,7 @@
        //                                                         ╰───────────────╯   ╰────────────────╯
       >;
     };
+*/
     isrt {
 //           -------------------------------------------------------------------------------------------------------------------------
 //           |     Y     |     C     |     L     |     M     |     K     |       |     Z     |     F     |     U     |     ,     |     '     |
