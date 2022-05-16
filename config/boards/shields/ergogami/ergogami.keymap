@@ -11,12 +11,12 @@
 
 
 &mt {
-     tapping-term-ms = <201>;
-     flavor = "tap-preferred";
+    tapping-term-ms = <201>;
+    flavor = "tap-preferred";
  };
 &sk {
-     release-after-ms = <2000>;
-     quick-release;
+    release-after-ms = <2000>;
+    quick-release;
  };
  
 /* Layers */
@@ -116,7 +116,7 @@
             label = "MACRO1";
             #binding-cells = <0>;
             bindings = < &sl AL2 >;
-	};
+        };
     };
 //		Keys Template
 //              -------------------------------------------------------------------------------------------------------------------------
@@ -125,95 +125,96 @@
 //             |  RC(0,10)  |  RC(0,11)  |  RC(0,12)  |  RC(0,13)  |  RC(0,14)  |         |  RC(0,30)  |  RC(0,29)  |  RC(0,28)  |  RC(0,27)  |  RC(0,26)  |
 //                                                                 |  RC(0,15)  |         |  RC(0,31)  |
     keymap {
-            compatible = "zmk,keymap";
-            qwerty {
+        compatible = "zmk,keymap";
+
+        qwerty {
             bindings = <
-        // ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────────╮   ╭────────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y            &kp U         &kp I         &kp O         &kp P
-        // ├─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp A         &kp S         &kp D         &st LSHFT F   &kp G               &kp H            &st RSHFT J   &kp K         &kp L         &kp SEMI
-        // ├─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N            &kp M         &kp COMMA     &kp DOT       &kp SLASH
-        // ╰─────────────┴─────────────┴─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                                     &lt NM1 SPACE       &td RSHFT BSPC
-        //                                                         ╰───────────────╯   ╰────────────────╯
-		>;
-		};
-       		isrt {
+            // ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────────╮   ╭────────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y            &kp U         &kp I         &kp O         &kp P
+            // ├─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp A         &kp S         &kp D         &st LSHFT F   &kp G               &kp H            &st RSHFT J   &kp K         &kp L         &kp SEMI
+            // ├─────────────┼─────────────┼─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N            &kp M         &kp COMMA     &kp DOT       &kp SLASH
+            // ╰─────────────┴─────────────┴─────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                                        &lt NM1 SPACE       &td RSHFT BSPC
+            //                                                         ╰───────────────╯   ╰────────────────╯
+            >;
+        };
+        isrt {
 //           -------------------------------------------------------------------------------------------------------------------------
 //           |     Y     |     C     |     L     |     M     |     K     |       |     Z     |     F     |     U     |     ,     |     '     |
 //           |     I     |     S     |     R     |     T     |     G     |       |     P     |     N     |     E     |     A     |     O     |
 //           |     Q     |     V     |     W     |     D     |     J     |       |     B     |     H     |     /     |     .     |     X     |
 //                                                           |   SPACE   |       |    BSPC   |
-		bindings = <
+            bindings = <
 		&kp Y       &kp C       &kp L       &kp M       &kp K		    &kp Z       &kp F       &kp U       &kp COMMA   &kp SQT
 		&kp I       &kp S       &kp R       &kp T       &kp G		    &kp P       &kp N       &kp E       &kp A       &kp O
 		&kp Q       &kp V       &kp W       &kp D       &kp J		    &kp B       &kp H       &kp FSLH    &kp DOT     &kp X
 								&td LSHFT SPACE	    &td RSHFT BSPC
-		>;
-		};
-       		alpha2 {
-		bindings = <
+            >;
+        };
+        alpha2 {
+            bindings = <
 		&trans 	 	&kp V 		&kp W		&kp M	 	 	&kp F    	&kp SQT			&kp Z 		&trans
 		&kp Q	 	&kp J 		&kp P		&kp K 			&kp B 		&kp DOT			&kp X		&kp Y 
 		&trans	 	&trans 		&trans 		&sk LSHIFT 		&sl AL2U	&trans			&trans		&trans
 								&trans	 		&trans
-		>;
-		};
+            >;
+        };
 		
-       		sym1 {
-		bindings = <
+        sym1 {
+            bindings = <
 		&trans 		&kp LA(N3)   	&kp LS(N3)	&kp DLLR	    	&kp LS(COMMA)	&kp LS(DOT)		&kp CARET	&trans
 		&kp GRAVE	&kp TILDE 	&kp MINUS      	&kp BSLH	 	&kp LBKT	&kp RBKT	 	&kp PIPE 	&kp SLASH
 		&trans		&trans  	&trans		&trans  		&trans		&trans 			&trans  	&trans
 							 	&trans		 	&trans
-		>;
-		};
-		sym2 {
-		bindings = <
+            >;
+        };
+        sym2 {
+            bindings = <
 		&trans		&kp ATSN	&td LA(RBKT) LA(LS(RBKT))	&td  LA(LBKT) LA(LS(LBKT))	&kp LPRN	&kp RPRN 	&kp SEMI 	&trans
 		&kp STAR  	&kp PRCNT	&td QMARK EXCL       		&kp DQT   			&kp LBRC  	&kp RBRC	&kp AMPS	&kp COLON 
 		&trans 		&trans 		&trans  			&trans 				&trans 		&trans 		&trans 		&trans   
 						 				&trans				&trans
 
-		>;
-		};
+            >;
+        };
 
-		num {
-		bindings = <
+        num {
+            bindings = <
 		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Z       &kp N7      &kp N8      &kp N9      &kp SQT
 		&kp A        &kp S        &kp D        &st LSHFT F  &kp G		   &kp H       &kp N4      &kp N5      &kp N6      &kp O
 		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N0      &kp N1      &kp N2      &kp N3      &kp X
 								&td LSHFT SPACE	    &td RSHFT BSPC
-		>;
-		};
+            >;
+        };
 
-		sys {
-		bindings = <
+        sys {
+            bindings = <
 		&trans		 	&kp ESC			&kp LC(LS(TAB)) 	&kp RC(TAB)		&td LG(V) LG(C) 	&kp UP 		&td Q BKSP 			&trans
 		&td LG(GRAVE) TAB	&td HOME DEL		&td END LG(LBKT) 	&kp LG(RBKT)		&td TAB LEFT  		&kp DOWN 	&td  LC(LG(LS(N4))) RIGHT 	&kp RET 
 		&trans 			&trans 		 	&trans			&trans	 		&kp RGUI		&trans 		&trans				&trans 	   
 									 		&trans	 		&trans
-		>;
-		};
+            >;
+        };
 
-		bt {
-		bindings = <
+        bt {
+            bindings = <
 		&trans		&bt BT_PRV	&bt BT_NXT	&trans 			&trans 	&trans	&trans	&trans
 		&bootloader  	&trans 		&trans 		&trans 			&trans 	&trans 	&trans	&bt BT_CLR
 		&trans 	 	&trans 		&trans		&to ISRT		&trans  &trans  &trans 	&bt BT_CLR
 						 		&trans			&trans
-		>;
-		};
+            >;
+        };
 
-       		alpha2cap {
-		bindings = <
+        alpha2cap {
+            bindings = <
 		&trans 	 	&kp LS(V)	&kp LS(W)	&kp LS(M) 	 	&kp LS(F)    	&trans		&kp LS(Z)	&trans 
 		&kp LS(Q) 	&kp LS(J) 	&kp LS(P)	&kp LS(K)		&kp LS(B)	&kp COMMA	&kp LS(X)	&kp LS(Y) 
 		&trans	 	&trans 		&trans 		&trans 			&kp LA(SEMI)	&trans		&trans		&trans
 								&trans	 		&trans
-		>;
-		};
+            >;
+        };
         
-	};
+    };
 };
