@@ -38,7 +38,7 @@
     };
     combo_sys {
       timeout-ms = <30>;
-      key-positions = <4 5 6>;
+      key-positions = <21 22 23>;
       bindings = <&to SYS>;
     };
     combo_caps {
@@ -48,9 +48,8 @@
     };
     combo_bt  {
       timeout-ms = <10>;
-      key-positions = <13 14>;
+      key-positions = <26 27 28>;
       bindings = <&to BT>;
-      layers = <SM1>; 
     };
     lalt {
       timeout-ms = <20>;
@@ -124,16 +123,7 @@
 //                                                                 |  RC(0,15)  |         |  RC(0,31)  |
 
   keymap {
-                compatible = "zmk,keymap";
-       		qwerty {
-		bindings = <
-		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Y        &kp U        &kp I        &kp O        &kp P
-		&kp A        &kp S        &kp D        &st LSHFT F  &kp G		   &kp H        &st RSHFT J  &kp K        &kp L        &kp SEMI
-		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N        &kp M        &kp COMMA    &kp DOT      &bt BT_CLR
-								    &lt NM1 SPACE	   &td RSHFT BSPC
-		>;
-		};
-/*
+    compatible = "zmk,keymap";
     qwerty {
       label = "QWERTY";
       bindings = <
@@ -148,7 +138,6 @@
        //                                                         ╰───────────────╯   ╰────────────────╯
       >;
     };
-*/
     isrt {
 //           -------------------------------------------------------------------------------------------------------------------------
 //           |     Y     |     C     |     L     |     M     |     K     |       |     Z     |     F     |     U     |     ,     |     '     |
@@ -209,6 +198,15 @@
 
     bt {
       bindings = <
+       // ╭──────────────┬──────────────┬──────────────┬─────────────┬───────────────╮   ╭────────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+            &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &kp R         &kp T               &kp Y            &kp U         &kp I         &kp O         &kp P
+       // ├──────────────┼──────────────┼──────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &kp A          &kp S          &kp D          &st LSHFT F   &kp G               &kp H            &st RSHFT J   &kp K         &kp L         &kp SEMI
+       // ├──────────────┼──────────────┼──────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &out OUT_USB   &out OUT_BLE   &kp C          &kp V         &bt BT_CLR          &kp N            &kp M         &kp COMMA     &kp DOT       &kp SLASH
+       // ╰──────────────┴──────────────┴──────────────┼─────────────┼───────────────┤   ├────────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                                       &lt NM1 SPACE       &td RSHFT BSPC
+       //                                                            ╰───────────────╯   ╰────────────────╯
             &trans		&bt BT_PRV	&bt BT_NXT	&trans 			&trans 	&trans	&trans	&trans
             &bootloader  	&trans 		&trans 		&trans 			&trans 	&trans 	&trans	&bt BT_CLR
             &trans 	 	&trans 		&trans		&to ISRT		&trans  &trans  &trans 	&bt BT_CLR
