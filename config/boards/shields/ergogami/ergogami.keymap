@@ -83,7 +83,7 @@
             bindings = <&kp>, <&to>;
 	    retro-tap;
         };
-	sk: shift_key {
+	st: shift_key {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_KEY";
             #binding-cells = <2>;
@@ -129,7 +129,7 @@
        		qwerty {
 		bindings = <
 		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Y        &kp U        &kp I        &kp O        &kp P
-		&kp A        &kp S        &kp D        &sk LSHFT F  &kp G		   &kp H        &sk RSHFT J  &kp K        &kp L        &kp SEMI
+		&kp A        &kp S        &kp D        &st LSHFT F  &kp G		   &kp H        &st RSHFT J  &kp K        &kp L        &kp SEMI
 		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N        &kp M        &kp COMMA    &kp DOT      &bt BT_CLR
 								    &lt NM1 SPACE	   &td RSHFT BSPC
 		>;
