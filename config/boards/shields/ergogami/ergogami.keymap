@@ -83,6 +83,16 @@
             bindings = <&kp>, <&to>;
 	    retro-tap;
         };
+	sk: shift_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_KEY";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&to>;
+	    retro-tap;
+        };
         hl: homerow_layers {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERS";
@@ -119,9 +129,9 @@
        		qwerty {
 		bindings = <
 		&kp Q        &kp W        &kp E        &kp R        &kp T		   &kp Y        &kp U        &kp I        &kp O        &kp P
-		&kp A        &kp S        &kp D        &kp F        &kp G		   &kp H        &kp J        &kp K        &kp L        &kp SEMI
+		&kp A        &kp S        &kp D        &sk LSHFT F  &kp G		   &kp H        &sk RSHFT J  &kp K        &kp L        &kp SEMI
 		&kp Z        &kp X        &kp C        &kp V        &kp B		   &kp N        &kp M        &kp COMMA    &kp DOT      &bt BT_CLR
-								    &td LSHFT SPACE	   &td RSHFT BSPC
+								    &lt NM1 SPACE	   &td RSHFT BSPC
 		>;
 		};
        		isrt {
@@ -166,10 +176,10 @@
 
 		num {
 		bindings = <
-		&trans		&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 		&hm RGUI N2 	&hm RALT N3		&hm RCTL N4	&trans
-		&kp MINUS	&kp PLUS 	&kp N5		&kp N6			&kp N7		&kp N8			&kp N9   	&kp EQUAL
-		&trans  	&trans 		&trans		&trans			&trans 		&trans 			&trans  	&trans 
-								&trans	 	 	&trans
+		&kp Y       &kp C       &kp L       &kp M       &kp K		    &kp Z       &kp N7      &kp N8      &kp N9      &kp SQT
+		&kp I       &kp S       &kp R       &kp T       &kp G		    &kp P       &kp N4      &kp N5      &kp N6      &kp O
+		&kp Q       &kp V       &kp W       &kp D       &kp J		    &kp N0      &kp N1      &kp N2      &kp N3      &kp X
+								&td LSHFT SPACE	    &td RSHFT BSPC
 		>;
 		};
 
