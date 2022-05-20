@@ -45,7 +45,7 @@
       key-positions = <1 2>;
       bindings = <&to QWERTY>;
       layers = <4>;
-    }
+    };
     combo_sys {
       timeout-ms = <30>;
       key-positions = <21 22 23>;
