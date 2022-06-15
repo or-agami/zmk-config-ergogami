@@ -67,22 +67,23 @@
   };
 
   behaviors {
-    hm: homerow_mods {
+    lm: layer_mods {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
+      label = "LAYER_MODS";
       #binding-cells = <2>;
-      tapping-term-ms = <300>;
+      tapping-term-ms = <200>;
       quick_tap_ms = <0>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&lt>, <&to>;
+      retro-tap;
     };
     hl: homerow_layers {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_LAYERS";
       #binding-cells = <2>;
-      tapping-term-ms = <220>;
+      tapping-term-ms = <200>;
       quick_tap_ms = <0>;
-      flavor = "tap-preferred";
+      flavor = "hold-preferred";
       bindings = <&kp>, <&to>;
     };
     hs: hold_shift {
@@ -151,7 +152,7 @@
    // ╭─────────────┬─────────────┬─────────────┬──────────────────┬───────────────╮   ╭─────────────────┬─────────────┬─────────────┬─────────────┬──────────────╮
         &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp C_VOL_DN       &kp C_VOL_UP        &kp KP_DIVIDE     &kp N7        &lt SYS N8    &kp N9        &kp KP_MINUS
    // ├─────────────┼─────────────┼─────────────┼──────────────────┼───────────────┤   ├─────────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
-        &kp TAB       &hm SYS SYS   &hm NAV NAV   &hl LSHFT QWERTY   &none               &kp KP_MULTIPLY   &kp N4        &lt NAV N5    &lt SYM N6    &kp KP_PLUS
+        &kp TAB       &lm SYS SYS   &lm NAV NAV   &hl LSHFT QWERTY   &none               &kp KP_MULTIPLY   &kp N4        &lt NAV N5    &lt SYM N6    &kp KP_PLUS
    // ├─────────────┼─────────────┼─────────────┼──────────────────┼───────────────┤   ├─────────────────┼─────────────┼─────────────┼─────────────┼──────────────┤
         &none         &none         &none         &none              &none               &kp N0            &kp N1        &kp N2        &kp N3        &kp RET
    // ╰─────────────┴─────────────┴─────────────┴──────────────────┼───────────────┤   ├─────────────────┼─────────────┴─────────────┴─────────────┴──────────────╯
