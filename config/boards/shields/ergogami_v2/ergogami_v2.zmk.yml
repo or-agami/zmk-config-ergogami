@@ -8,5 +8,5 @@ exposes: [i2c_oled]
 features:
   - keys
 siblings:
-  - ergogami_left
-  - ergogami_right
+  - ergogami_v2_left
+  - ergogami_v2_right
