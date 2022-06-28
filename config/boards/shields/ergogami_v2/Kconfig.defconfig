@@ -1,7 +1,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ERGOGAMI_LEFT
+if SHIELD_ERGOGAMI_V2_LEFT
 
 config ZMK_KEYBOARD_NAME
 	default "Ergogami_V2"
@@ -11,7 +11,7 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 
 endif
 
-if SHIELD_ERGOGAMI_LEFT || SHIELD_ERGOGAMI_RIGHT
+if SHIELD_ERGOGAMI_V2_LEFT || SHIELD_ERGOGAMI_V2_RIGHT
 
 config ZMK_SPLIT
 	default y
