@@ -31,27 +31,27 @@
     combo_qwerty {
       timeout-ms = <40>;
       key-positions = <0 1>;
-      bindings = <&to QWERTY>;
+      bindings = <&tog QWERTY>;
     };
     combo_num {
       timeout-ms = <30>;
       key-positions = <1 2 3>;
-      bindings = <&to NUM>;
+      bindings = <&tog NUM>;
     };
     combo_sym {
       timeout-ms = <30>;
       key-positions = <11 12 13>;
-      bindings = <&to SYM>;
+      bindings = <&tog SYM>;
     };
     combo_nav {
       timeout-ms = <30>;
       key-positions = <21 22 23>;
-      bindings = <&to NAV>;
+      bindings = <&tog NAV>;
     };
     combo_bt  {
       timeout-ms = <40>;
       key-positions = <20 21 22 23>;
-      bindings = <&to BT>;
+      bindings = <&tog BT>;
     };
     combo_caps {
       timeout-ms = <45>;
