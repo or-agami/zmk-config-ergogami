@@ -31,7 +31,7 @@
     combo_qwerty {
       timeout-ms = <40>;
       key-positions = <0 1>;
-      bindings = <&tog QWERTY>;
+      bindings = <&to QWERTY>;
     };
     combo_num {
       timeout-ms = <30>;
