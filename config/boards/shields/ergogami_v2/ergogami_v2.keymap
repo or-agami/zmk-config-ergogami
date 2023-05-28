@@ -21,10 +21,11 @@
 #define QWERTY 0
 #define QWERTY_MAC 1
 #define NAV 2
-#define NUM 3
-#define SYM 4
-#define SYS 5
-#define BT 6
+#define NAV_MAC 3
+#define NUM 4
+#define SYM 5
+#define SYS 6
+#define BT 7
 / {
 
   combos {
