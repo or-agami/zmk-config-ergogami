@@ -109,15 +109,32 @@
   };
 
   macros {
-    ipad_next_app: ipad_next_app {
-        label = "IPAD_nex_app";
+    ipad_prev_app: ipad_prev_app {
+        label = "IPAD_prev_app";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings
-            = <&macro_press &kp CAPS>
-            , <&macro_tap &kp LEFT_ARROW>
-            , <&macro_release &kp CAPS>
-            ;
+        bindings = 
+          <&macro_press &kp CAPS>,
+          <&macro_tap &kp LEFT_ARROW>,
+          <&macro_release &kp CAPS>;
+    };
+    ipad_next_app: ipad_next_app {
+        label = "IPAD_next_app";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+          <&macro_press &kp CAPS>,
+          <&macro_tap &kp RIGHT_ARROW>,
+          <&macro_release &kp CAPS>;
+    };
+    ipad_app_lib: ipad_app_lib {
+        label = "IPAD_app_library";
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+          <&macro_press &kp LSHIFT &kp CAPS>,
+          <&macro_tap &kp RIGHT_ARROW>,
+          <&macro_release &kp LSHIFT &kp CAPS>;
     };
 };
   
@@ -182,15 +199,15 @@
     nav_mac {
       label = "NAV_MAC";
       bindings = <
-   // ╭─────────────┬──────────────────┬───────────────────┬───────────────────┬─────────────╮   ╭─────────────┬──────────────────┬─────────────────┬───────────────────┬─────────────╮
-        &kp ESC       &kp LG(TAB)        &ipad_next_app   &kp LC(Z)           &kp LC(Y)         &none         &kp HOME           &kp UP            &kp END             &kp PG_UP
-   // ├─────────────┼──────────────────┼───────────────────┼───────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┼─────────────┤
-        &kp LCTRL     &kp LALT           &kp LC(H)           &kp LSHFT           &none             &kp RET       &kp LEFT           &kp DOWN          &kp RIGHT           &kp PG_DN
-   // ├─────────────┼──────────────────┼───────────────────┼───────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┼─────────────┤
-        &kp LGUI      &kp LG(LC(LEFT))   &none               &kp LG(LC(RIGHT))   &none             &kp DEL       &kp LS(LC(LEFT))   &kp LS(END)   &kp LS(LC(RIGHT))   &kp PSCRN
-   // ╰─────────────┴──────────────────┼───────────────────┼───────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┴─────────────╯
-                                         &trans              &trans              &trans            &trans        &trans             &trans
-   //                                  ╰───────────────────┴───────────────────┴─────────────╯   ╰─────────────┴──────────────────┴─────────────────╯
+   // ╭─────────────┬────────────────┬─────────────┬────────────────┬─────────────╮   ╭─────────────┬──────────────────┬─────────────────┬───────────────────┬─────────────╮
+        &kp ESC       &ipad_app_lib    &kp LC(TAB)   &kp LC(Z)        &kp LC(Y)         &none         &kp HOME           &kp UP            &kp END             &kp PG_UP
+   // ├─────────────┼────────────────┼─────────────┼────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┼─────────────┤
+        &kp LCTRL     &kp LALT         &kp LC(H)     &kp LSHFT        &none             &kp RET       &kp LEFT           &kp DOWN          &kp RIGHT           &kp PG_DN
+   // ├─────────────┼────────────────┼─────────────┼────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┼─────────────┤
+        &kp LGUI      &ipad_prev_app   &none         &ipad_next_app   &none             &kp DEL       &kp LC(LEFT)       &kp LS(END)       &kp LC(RIGHT)       &kp PSCRN
+   // ╰─────────────┴────────────────┼─────────────┼────────────────┼─────────────┤   ├─────────────┼──────────────────┼─────────────────┼───────────────────┴─────────────╯
+                                       &trans        &trans           &trans            &trans        &trans             &trans
+   //                                ╰─────────────┴────────────────┴─────────────╯   ╰─────────────┴──────────────────┴─────────────────╯
       >;
     };
 
